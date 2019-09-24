@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- #378C3F -->
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
@@ -12,6 +13,69 @@
     <link href="css/aos.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
+    <style>
+      /* ---- reset ---- */
+
+      body {
+      margin: 0;
+      /* `  font:normal 75% Arial, Helvetica, sans-serif; */
+      }
+
+      canvas {
+      display: block;
+      vertical-align: bottom;
+      }
+
+      /* ---- particles.js container ---- */
+
+      #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* background-color: rgb(26,34,44); */
+      background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(55, 140, 63, 0.6))
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      }
+
+      /* ---- stats.js ---- */
+
+      .count-particles{
+      background: rgb(100,100,100);
+      position: absolute;
+      top: 48px;
+      left: 0;
+      width: 80px;
+      color: rgb(100,100,100);
+      font-size: .8em;
+      text-align: left;
+      text-indent: 4px;
+      line-height: 14px;
+      padding-bottom: 2px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      }
+
+      .js-count-particles{
+      font-size: 1.1em;
+      }
+
+      #stats,
+      .count-particles{
+      -webkit-user-select: none;
+      }
+
+      #stats{
+      border-radius: 3px 3px 0 0;
+      overflow: hidden;
+      }
+
+      .count-particles{
+      border-radius: 0 0 3px 3px;
+      }
+    </style>
   </head>
   <body id="top">
     <header>
@@ -33,13 +97,18 @@
         </nav>
       </div>
     </header>
+    
     <div class="page-content">
       <div>
 <div class="profile-page">
+  
   <div class="wrapper">
+    <!-- <div id="particles-js"></div> -->
     <div class="page-header page-header-small" filter-color="grey">
-      <div class="page-header-image" data-parallax="true" style="background-image: url('images/cc-bg-1.jpg');"></div>
+      <!-- <div class="page-header-image" data-parallax="true" style="background-image: url('images/cc-bg-1.jpg');"></div> -->
+      <div id="particles-js"></div>
       <div class="container">
+        
         <div class="content-center">
           <div class="cc-profile-image"><a href="#"><img src="images/ronak.jpg" alt="Image"/></a></div>
           <div class="h2 title">Ronak Doshi</div>
@@ -55,6 +124,7 @@
     </div>
   </div>
 </div>
+
 <div class="section" id="about">
   <div class="container">
     <div class="card" data-aos="fade-up" data-aos-offset="10">
@@ -562,6 +632,7 @@ It has a simplistic interface which is easily understandable. The aim of the pro
     </div>
   </div>
 </div></div>
+
     </div>
     <footer class="footer">
       <div class="container text-center"><a class="cc-facebook btn btn-link" href="https://www.facebook.com/ronak.doshi.73"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a><a class="cc-twitter btn btn-link " href="https://github.com/ronak66"><i class="fa fa-github fa-2x " aria-hidden="true"></i></a><a class="cc-google-plus btn btn-link" href="https://linkedin.com/in/ronak-doshi-4a6292150"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a><a class="cc-instagram btn btn-link" href="https://www.instagram.com/ronak_66/"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a></div>
@@ -576,5 +647,35 @@ It has a simplistic interface which is easily understandable. The aim of the pro
     <script src="js/now-ui-kit.js?v=1.1.0"></script>
     <script src="js/aos.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- <script>
+      particlesJS.load('particles-js', 'js/particles.js', function () {
+          console.log('callback - particles.js config loaded');
+        });
+    </script> -->
+    <script src='js/app.js'></script>
+    <script src='js/particles.js'></script>
+    <script>
+      var count_particles, stats, update;
+      stats = new Stats;
+      stats.setMode(0);
+      stats.domElement.style.position = 'absolute';
+      stats.domElement.style.left = '0px';
+      stats.domElement.style.top = '0px';
+      document.body.appendChild(stats.domElement);
+      count_particles = document.querySelector('.js-count-particles');
+      update = function () {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+          count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    </script>
+    <!-- <script src="js/particles.js"></script> -->
+    <!-- <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+    
   </body>
 </html>
