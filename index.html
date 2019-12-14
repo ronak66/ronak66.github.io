@@ -99,6 +99,41 @@
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#education">Education</a></li>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>                
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#projects">Projects</a></li>
+                <div class="dropdown">
+                    <!-- <button class="dropbtn">Dropdown</button> -->
+                    <li class="nav-item"><a class="nav-link smooth-scroll dropbtn" href="#projects">Projects</a></li>
+                    <div class="dropdown-content">
+                      <a href="#mldl" class="smooth-scroll">ML and DL Projects</a>
+                      <a href="#research" class="smooth-scroll">Research Projects</a>
+                      <a href="#personal" class="smooth-scroll">Personal Projects</a>
+                      <a href="#course" class="smooth-scroll">Course Projects</a>
+                    </div>
+                  </div>
+                  <style>
+                      
+                      
+                      .dropdown-content {
+                        display: none;
+                        /* position: absolute; */
+                        /* background-color: #f1f1f1; */
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        z-index: 1;
+                      }
+                      
+                      .dropdown-content a {
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                      }
+                      
+                      .dropdown-content a:hover {opacity: 0.4;}
+                      
+                      .dropdown:hover .dropdown-content {display: block;}
+                      
+                      /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+                      </style>
                 <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
               </ul>
             </div>
@@ -363,7 +398,8 @@
 
 <div class="section" id="projects">
   <div class="container cc-experience">
-    <div class="h4 text-center mb-4 title">Projects</div>
+    <div class="h2 text-center mb-4 title">Projects</div>
+    <br>
     <div class="card">
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
@@ -375,7 +411,7 @@
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5">Co-Founder</div>
+            <div class="h5">Co-Founder and Developer</div>
             <p>
                 An intuitive writing software with note management facilities. All the notes are uploaded and stored in our servers. They can be accessed anytime from anywhere ! It is a platform where people can share, and access the notes.
 
@@ -387,37 +423,108 @@ It has a simplistic interface which is easily understandable. The aim of the pro
         </div>
       </div>
     </div>
+
+    <br>
+    <div class="h4 text-center mb-4 title" id="mldl">1. Machine Learning and Deep Learning Projects</div>
+    <hr>
+
     <div class="card">
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body cc-experience-header">
-            <div class="h5">Hyper Flexible Surgical Device</div>
+            <div class="h5">Malaria Parasite Detection</div>
           </div>
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5">Research Project | Under <a href='https://www.iiitb.ac.in/faculty_page.php?name=madhavrao'>Prof Madhav Rao</a></div>
+            <!-- <div class="h5">Developer</div> -->
             <p>
-              It is a surgical device used for Endoscopy during neurosurgeries<br>
               <ul>
-                <li>Medical student from NIMHANS conducted 15 real Human Brain Dissections using our surgical snake</li>
-                <li>As an extended project we are now trying to quantify a surgeon using the kinematics data collected from the 
-                  device. Kinematics data when plotted forms clusters representing the quality of surgery, compact the cluster better is the 
-                  surgeon.
-                </li>
-                <li>Article on this project was publised in one of the most prominent newspaper in India called TheTimesOfIndia. 
-                  Article link: <a href='https://timesofindia.indiatimes.com/city/bengaluru/bluru-team-develops-robot-inspired-by-elephant-trunk-for-brain-surgery/articleshow/69848210.cms'>TOI article</a>
-                </li>
+              <li>Given a image of a segmented cell from the thin blood smear, detects whether 
+              it is infected by malaria parasite or not, using Machine Learning, CNN and Image Processing</li>
+              <li><b>Model is able to predict correct outcome with accuracy score of 95.87%</b></li>
               </ul>
-              Check it out here:<br>
+              <br>
+              Check it out here:
               <ul>
-              <li><a href="https://ronak66.github.io/Snake-V2/Poster.pdf">Porject Poster</a></li>
+                <li><a href="https://github.com/ronak66/Malaria-Parasite-Detection">github.com/ronak66/Malaria-Parasite-Detection</a><br></li>
+                <li><a href="https://github.com/ronak66/Malaria-Parasite-Detection/blob/master/Malaria_Parasite_Detection_Report.pdf">Project Report</a></li>
               </ul>
             </p>
           </div>
         </div>
       </div>
     </div>
+    <div class="card">
+        <div class="row">
+          <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+            <div class="card-body cc-experience-header">
+              <div class="h5">Song Reccomendation System</div>
+            </div>
+          </div>
+          <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+            <div class="card-body">
+              <!-- <div class="h5">Developer</div> -->
+              <p>
+                <ul>
+                <li>A music recommendation system that recommends songs according your current mood. 
+                  Given a current song beingplayed, it learns and recommends songs that you would like to listen to next</li>
+                <li>Achieved by breaking the available song data-set intoKclusters and recommend song based on popularity and it’sdistance from current song. 
+                  Applied reinforcement learning technique for better convergence</li>
+                </ul>
+                <br>
+                Check it out here:
+                <ul>
+                  <li><a href="https://github.com/ronak66/Song-Recommendation-System">github.com/ronak66/Song-Recommendation-System</a><br></li>
+                  <li><a href="https://github.com/ronak66/Song-Recommendation-System/blob/master/Song_Recommendation_System_Report.pdf">Project Report</a></li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <div class="h4 text-center mb-4 title" id="research">2. Research Projects</div>
+      <hr>
+      
+      <div class="card">
+        <div class="row">
+          <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+            <div class="card-body cc-experience-header">
+              <div class="h5">Hyper Flexible Surgical Device</div>
+            </div>
+          </div>
+          <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+            <div class="card-body">
+              <div class="h5">Research Project | Under <a href='https://www.iiitb.ac.in/faculty_page.php?name=madhavrao'>Prof Madhav Rao</a></div>
+              <p>
+                It is a surgical device used for Endoscopy during neurosurgeries<br>
+                <ul>
+                  <li>Medical student from NIMHANS conducted 15 real Human Brain Dissections using our surgical snake</li>
+                  <li>As an extended project we are now trying to quantify a surgeon using the kinematics data collected from the 
+                    device. Kinematics data when plotted forms clusters representing the quality of surgery, compact the cluster better is the 
+                    surgeon.
+                  </li>
+                  <li>Article on this project was publised in one of the most prominent newspaper in India called TheTimesOfIndia. 
+                    Article link: <a href='https://timesofindia.indiatimes.com/city/bengaluru/bluru-team-develops-robot-inspired-by-elephant-trunk-for-brain-surgery/articleshow/69848210.cms'>TOI article</a>
+                  </li>
+                </ul>
+                Check it out here:<br>
+                <ul>
+                <li><a href="https://ronak66.github.io/Snake-V2/Poster.pdf">Porject Poster</a></li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <br>
+      <div class="h4 text-center mb-4 title" id="personal">3. Personal Projects</div>
+      <hr>  
+
     <div class="card">
       <div class="row">
         <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
@@ -427,10 +534,11 @@ It has a simplistic interface which is easily understandable. The aim of the pro
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5">Developer</div>
+            <!-- <div class="h5">Developer</div> -->
             <p>
                 Its a website containing all the useful concepts used in Competitive Programming and contains implementation
                 of collection of data structures and algorithms<br>
+                <br>
                 Check it out here:<br>
                 <a href="https://algorithms.zense.co.in">algorithms.zense.co.in</a>
             </p>
@@ -447,11 +555,12 @@ It has a simplistic interface which is easily understandable. The aim of the pro
         </div>
         <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
           <div class="card-body">
-            <div class="h5">Developer</div>
+            <!-- <div class="h5">Developer</div> -->
             <p>
               GSOC data extractor is a website where I have scraped all the past GSOC years data and wrote a search algorithms which 
               takes the input technology and returns all the organizations using that particular technology<br>
               It's a very helpfull tool for people applying for GSOC as it makes organization selection very easy and convienent.
+              <br><br>
               Check it out here:<br>
               <ul>
               <li><a href="https://gsoc-data-extractor.herokuapp.com/">gsoc-data-extractor.herokuapp.com/</a></li>
@@ -462,6 +571,12 @@ It has a simplistic interface which is easily understandable. The aim of the pro
         </div>
       </div>
     </div>
+
+    <br>
+    <div class="h4 text-center mb-4 title" id="course">4. Course Projects</div>
+    <hr>
+
+
     <div class="card" >
       
       <div class="row">
@@ -475,6 +590,7 @@ It has a simplistic interface which is easily understandable. The aim of the pro
             <div class="h5">3rd Sem Course Project</div>
             <p>
               Small Scale Data Processing Toolkit<br>
+              <br>
               Check it out here:<br>
               <a href="https://github.com/ronak66/Data-Processing-Toolkit"> github.com/ronak66/Data-Processing-Toolkit</a>
             </p>
@@ -496,6 +612,7 @@ It has a simplistic interface which is easily understandable. The aim of the pro
                 Designed and implemented a direct-mapped cache to hold 256 blocks, 16 32-bit
                 instruction per block with 32-bit address line. Implemented an LRU scheme for replacement
                 and conducted a detailed analysis of how ”miss rate” change with varying word size per Block<br>
+                <br>
                 Check it out here:<br>
                 <a href="https://github.com/ronak66/Direct-Mapped-Cache">github.com/ronak66/Direct-Mapped-Cache</a>
             </p>
@@ -516,6 +633,7 @@ It has a simplistic interface which is easily understandable. The aim of the pro
             <p>
                 Designed a 2-D arcade game where you need to dodge various space obstacles such as planets,
                 meteors etc to gain points and set a high score. Difficulty increases as you move forward.<br>
+                <br>
                 Check it out here:<br>
                 <a href="https://github.com/ronak66/Galactic-Warrior">github.com/ronak66/Galactic-Warrior</a>
             </p>
