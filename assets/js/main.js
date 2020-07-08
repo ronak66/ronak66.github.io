@@ -210,3 +210,35 @@
 		}
 
 })(jQuery);
+
+// function updateJobsTable(){
+// 	var formData = new FormData(document.getElementById('mails'));
+//     $.ajax({
+// 		type: "GET",
+// 		enctype: 'multipart/form-data',
+//         url: "api/workflow/schedule",
+//         processData: false,
+//         contentType: false,
+//         cache: false,
+//         timeout: 600000,
+//         beforeSend: function(request) {
+//             request.setRequestHeader("email",  $.cookie("email"));
+//             request.setRequestHeader("token",  $.cookie("token"));
+//         },
+//         success: function (data) {
+//             data=JSON.parse(data);
+//             var table=$("#jobTable");
+//             $("#jobTable tbody").empty();
+//             for(var i=0;i<data.length;i++){
+//                 var job=data[i];
+//                 var row="<tr><td>"+job.id+"</td><td>"+job.startTime+"</td><td>"+job.endTime+"</td><td>"+job.status+"</td><td><button onclick='getWorkflow("+job.id+")' class='btn      btn-default'>Load</button></td></tr>"
+//                 table.append(row);
+//             }
+//         },
+//         error: function (e) {
+//             if(e.status===400){
+//                 alert("Error!"+e.responseText);
+//             }
+//         }
+//     });
+// }
