@@ -12,6 +12,7 @@
 		$main = $('#main'),
 		$panels = $main.children('.panel'),
 		$nav = $('#nav'), $nav_links = $nav.children('a');
+		// $("a").attr("target", "_blank");
 
 	// Breakpoints.
 		breakpoints({
